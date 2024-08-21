@@ -64,14 +64,25 @@
     </section>
 
     <section id="section-4">
+
         <div class="custom-dropdown">
-            <button class="dropdown-button">Select</button>
+            <button class="dropdown-button">
+                <span class="button-text">Select</span>
+                <span class="dropdown-arrow"><i class="fa-solid fa-caret-down"></i></span>
+            </button>
             <div class="dropdown-content">
-                <a href="#" data-value="item1">Item 1</a>
-                <a href="#" data-value="item2">Item 2</a>
-                <a href="#" data-value="item3">Item 3</a>
+                <a href="#" data-value="item1" class="dropdown-item"><span>Item 1</span></a>
+                <a href="#" data-value="item2" class="dropdown-item"><span>Item 2</span></a>
+                <a href="#" data-value="item3" class="dropdown-item"><span>Item 3</span></a>
+            </div>
+            
+            <!-- Popup Div -->
+            <div class="popup">
+                <span class="popup-close">&times;</span>
+                <div class="popup-content"></div>
             </div>
         </div>
+    
         <article>
             <h2>Title</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, ut qui.</p>
@@ -92,7 +103,9 @@
             <h2>Title</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, ut qui.</p>
         </article>
+
     </section>
+
     <section id="section-5">Section 5</section>
     <section id="section-6">Section 6</section>
 

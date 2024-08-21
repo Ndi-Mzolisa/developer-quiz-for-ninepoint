@@ -53,12 +53,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // --------------- JS for the dropdown selector element --------------
-// Toggle dropdown visibility on button click
-document.querySelector('.dropdown-button').addEventListener('click', function(event) {
+
+// Function to toggle dropdown visibility
+function toggleDropdown(event) {
     event.stopPropagation(); // Prevent click from bubbling up
     const dropdownContent = document.querySelector('.dropdown-content');
     dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
-});
+}
+
+// Attach click event to both the text and the arrow
+document.querySelector('.button-text').addEventListener('click', toggleDropdown);
+document.querySelector('.dropdown-arrow').addEventListener('click', toggleDropdown);
 
 // Hide dropdown if clicking outside of it
 window.addEventListener('click', function() {
@@ -71,10 +76,41 @@ document.querySelectorAll('.dropdown-content a').forEach(item => {
     item.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent the default anchor behavior
         const value = this.getAttribute('data-value');
-        const button = document.querySelector('.dropdown-button');
-        button.textContent = this.textContent;
+        const buttonText = document.querySelector('.button-text');
+        buttonText.textContent = this.textContent;
         document.querySelector('.dropdown-content').style.display = 'none'; // Hide the dropdown after selection
     });
 });
 
+
+// Wait for the DOM to fully load
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all dropdown items
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+    // Get the popup and its content area
+    const popup = document.querySelector('.popup');
+    const popupContent = document.querySelector('.popup-content');
+    // Get the close button for the popup
+    const popupClose = document.querySelector('.popup-close');
+
+    // Loop through each dropdown item
+    dropdownItems.forEach(item => {
+        // Add click event listener to each item
+        item.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+
+            // Set the popup content to the text of the clicked item
+            popupContent.textContent = this.querySelector('span').textContent.trim();
+
+            // Display the popup
+            popup.style.display = 'block';
+        });
+    });
+
+    // Add click event listener to the close button
+    popupClose.addEventListener('click', function() {
+        // Hide the popup
+        popup.style.display = 'none';
+    });
+});
 

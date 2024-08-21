@@ -202,10 +202,11 @@
     position: relative;
 }
   
- /* Container for custom dropdown */
+/* Container for custom dropdown */
 .custom-dropdown {
     position: relative;
     display: inline-block;
+    color: #111;
 }
 
 /* Button for dropdown */
@@ -213,13 +214,34 @@
     padding: 1rem 6rem;
     border: 1px solid #8f8f8f;
     background-color: white;
-    color: #333;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 4px;
+    cursor: default;
     width: 100%;
-    text-align: left;
-    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    position: relative;
+    justify-content: space-center;
+    align-items: center;
+}
+
+.dropdown-button span{
+    color: #1f1f1f;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.dropdown-button span i {
+    color: #1f1f1f;
+    cursor: pointer;
+    font-size: 3rem;
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+/* Dropdown arrow */
+.dropdown-arrow {
+    margin-left: 1rem;
 }
 
 /* Dropdown content (hidden by default) */
@@ -230,23 +252,63 @@
     min-width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    border-radius: 4px;
-    margin-top: 0.5rem;
+    margin-top: 0;
     overflow: hidden;
 }
 
 /* Style for each dropdown link */
 .dropdown-content a {
-    color: #333;
     padding: 1rem;
     text-decoration: none;
     display: block;
-    transition: background-color 0.3s ease;
+    cursor: default;
 }
 
-/* Change background color on hover */
-.dropdown-content a:hover {
-    background-color: #f0f0f0;
+.dropdown-content a span {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #1f1f1f;
 }
+
+
+/* Position the dropdown container */
+.custom-dropdown {
+    position: relative;
+}
+
+/* Style the popup */
+.popup {
+    position: absolute;
+    top: 100%; /* Position the popup right below the dropdown-content */
+    left: 10%;
+    width: 80%;
+    height: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: none; /* Initially hidden */
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the close button */
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+}
+
+/* Content inside the popup */
+.popup-content {
+    padding: 20px;
+    margin-top: 40px; /* Offset for the close button */
+    font-size: 16px;
+    color: #333;
+}
+
+
  
 

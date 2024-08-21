@@ -1,0 +1,127 @@
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #666;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+  }
+  
+  /* Navigation Styles */
+  #navigation {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    color: #333;
+    background-color: white;
+    z-index: 1000;
+  }
+
+  #navigation:hover{
+    background-color: black;
+    color: white;
+  }
+
+  /* Prevent hover effect when the sidebar is active */
+#navigation.no-hover:hover {
+    background-color: white;
+    color: #333;
+}
+  
+  #navigation p {
+    font-weight: 900;
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+    color: inherit;
+    letter-spacing: -4px;
+  }
+  
+  #navigation i {
+    font-size: 24px;
+    cursor: pointer;
+    color: inherit;
+  }
+  
+  /* Sidebar Styles */
+  #sidebar {
+    position: fixed;
+    top: 0;
+    right: -27%; /* Hidden by default */
+    width: 27%;
+    height: 100%;
+    background-color: white;
+    padding-top: 60px; /* Space for the navigation bar */
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+  
+  #sidebar.active {
+    right: 0;
+  }
+  
+  #sidebar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;                                  /*RELATIVE helps us to make the child elements BASOLUTE*/
+}
+
+
+  #sidebar a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+  }
+
+  /* Ensure sidebar links always have the underline */
+#sidebar li a::after {
+    content: "";
+    width: 3%;
+    height: 1px;
+    background: #666;
+    position: absolute;
+    bottom: -2px;
+    left: 36px;
+    visibility: visible; /* Always visible */
+}
+
+#sidebar li a.active::after,
+#sidebar li a:hover::after,
+#sidebar i.active::after,
+#sidebar i:hover::after {
+    content: "";                                    /* create the underline below the Nav Links upon clicking*/
+    width: 3%;
+    height: 1px;
+    background: #666;
+    position: absolute;                          /* to use ABSOLUTE in this Child element (<a>), I MUST use RELATIVE inside the parent (<li>)*/
+    bottom: -2px;
+    left: 36px;
+}
+  
+  /* Main content styles */
+  main {
+    margin-top: 60px; /* Space for fixed navigation */
+    padding: 20px;
+  }
+  
+  section {
+    padding: 50px 0;
+  }
+  
+  
+  /* Styles for the close icon */
+  #navigation i.fa-times {
+    display: none;
+  }
+  
+

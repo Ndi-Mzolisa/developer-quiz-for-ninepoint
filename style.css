@@ -197,9 +197,10 @@
 #section-4 {
     background-color: rgb(215, 218, 218);
     text-align: center;
-    padding: 2.67rem 0;
+    padding: 3rem 0;
     margin-top: 1.5rem;
     position: relative;
+    height: 98vh;
 }
   
 /* Container for custom dropdown */
@@ -211,7 +212,7 @@
 
 /* Button for dropdown */
 .dropdown-button {
-    padding: 1rem 6rem;
+    padding: 1rem 8.4rem;
     border: 1px solid #8f8f8f;
     background-color: white;
     cursor: default;
@@ -262,6 +263,7 @@
     text-decoration: none;
     display: block;
     cursor: default;
+    border: 1px solid #8f8f8f;
 }
 
 .dropdown-content a span {
@@ -276,37 +278,98 @@
     position: relative;
 }
 
-/* Style the popup */
+/* Style for the popup */
 .popup {
     position: absolute;
-    top: 100%; /* Position the popup right below the dropdown-content */
-    left: 10%;
-    width: 80%;
-    height: 300px;
+    top: calc(100% + 2rem); /* Position the popup right below the dropdown-content */
+    right: -126%;
+    width: 1200px;
+    height: 60vh;
     background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: 1px solid white;
     display: none; /* Initially hidden */
     z-index: 100;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-self: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Style the close button */
+/* Style for the close button */
 .popup-close {
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: calc(2.4rem - 12px);
+    right: 2.4rem;
     cursor: pointer;
-    font-size: 20px;
-    color: #333;
+    font-size: 3rem;
+    padding: 0;
+}
+
+.popup-close i{
+    margin: 0;
 }
 
 /* Content inside the popup */
 .popup-content {
-    padding: 20px;
+    position: absolute;
+    left: calc(50% - 1rem);
+    top: calc(50% - (40px + 1rem));
+    padding: 0;
     margin-top: 40px; /* Offset for the close button */
-    font-size: 16px;
-    color: #333;
+    font-size: 2rem;
+    color: #1f1f1f;
+    justify-self: center;
+    align-self: center;
+}
+
+#section-4 article{
+    background-color: #9f9f9f;
+    padding: 1.8rem 1.5rem;
+    width: 12rem;
+    height: 18rem;
+    text-align: left;
+}
+
+#section-4 article h2{
+    color: #efefef;
+}
+
+#section-4 article p{
+    color: #efefef;
+    font-size: 0.9rem;
+    padding-top: 0.5rem;
+}
+
+#section-4 article:nth-of-type(1){     
+    position: absolute;
+    left: 20%;
+    top: 5rem;
+}
+#section-4 article:nth-of-type(2){
+    position: absolute;
+    right: 20%;
+    top: 5rem;
+}
+#section-4 article:nth-of-type(3){
+    position: absolute;
+    left: calc(20% - 2rem);
+    top: calc(5rem + 15.8rem + 3.4rem + 1.2rem);
+    padding: 1.2rem 1.5rem;
+    height: 12.9rem;
+}
+#section-4 article:nth-of-type(4){
+    position: absolute;
+    right: calc(20% - 2rem);
+    top: calc(5rem + 15.8rem + 3.4rem + 1.2rem);
+    padding: 1.2rem 1.5rem;
+    height: 12.9rem;
+    width: 21rem;
+}
+#section-4 article:nth-of-type(5){
+    position: absolute;
+    top: calc(50% - 4rem);
+    left: calc(50% - 6rem);
 }
 
 

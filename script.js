@@ -82,8 +82,8 @@ document.querySelectorAll('.dropdown-content a').forEach(item => {
     });
 });
 
-
-// Wait for the DOM to fully load
+// ---- Code for the drop down elements
+    // Wait for the DOM to fully load
 document.addEventListener('DOMContentLoaded', function() {
     // Get all dropdown items
     const dropdownItems = document.querySelectorAll('.dropdown-item');
@@ -111,6 +111,9 @@ document.addEventListener('DOMContentLoaded', function() {
     popupClose.addEventListener('click', function() {
         // Hide the popup
         popup.style.display = 'none';
+        console.log('closed from X');
     });
+
+
 });
 

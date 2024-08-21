@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #666;
+    color: #757575;
   }
   
   body {
@@ -128,11 +128,11 @@
 #section-1 {
     display: flex;
     flex-direction: column;
-    background-color: rgb(215, 220, 218);
+    background-color: rgb(215, 218, 218);
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 16.75rem 29rem 10rem 29rem;    /* an extra 6.75re, on top padding to give space for the fixed nav */
+    padding: 18.75rem 29rem 12rem 29rem;    /* an extra 6.75re, on top padding to give space for the fixed nav */
 }
 
 #section-1 h2,
@@ -156,28 +156,29 @@
     line-height: 1.4rem;
 }
 
-    /* Section 2 */
+    /* Section 2 - 3*/
 #section-2,
 #section-3 {
     display: flex;
     column-gap: 0rem;
-    padding: 3.6rem 0;
+    padding: 3.78rem 1px;
 }
 
 #section-2 .img-div,
 #section-3 .img-div {
     width: 100%;
     background-color: #9f9f9f;
+    border: 1px solid #757575;
 }
 
 #section-2 .content-div{
-    width: calc(100% - 12rem);
-    padding: 2rem 7.5rem 2rem 4.5rem;
+    width: calc(100% - (7.5rem + 4.5rem));
+    padding: 2.7rem 7.5rem 2.7rem 4.5rem;
 }
 
 #section-3 .content-div{
-    width: calc(100% - 12rem);
-    padding: 2rem 4.5rem 2rem 7.5rem;
+    width: calc(100% - (7.5rem + 4.5rem));
+    padding: 2.7rem 4.5rem 2.7rem 7.5rem;
 }
 
 #section-2 button,
@@ -186,13 +187,66 @@
     font-weight: bold;
     font-size: 1rem;
     background-color: #9f9f9f;
-    padding: 8px 45px;
+    padding: 9px 45px;
     margin-top: 1rem;
     border: none;
     border-radius: 10px;
 }
+
+    /* Section 4*/
+#section-4 {
+    background-color: rgb(215, 218, 218);
+    text-align: center;
+    padding: 2.67rem 0;
+    margin-top: 1.5rem;
+    position: relative;
+}
   
-  
-  
-  
+ /* Container for custom dropdown */
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Button for dropdown */
+.dropdown-button {
+    padding: 1rem 6rem;
+    border: 1px solid #8f8f8f;
+    background-color: white;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+/* Style for each dropdown link */
+.dropdown-content a {
+    color: #333;
+    padding: 1rem;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+/* Change background color on hover */
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+}
+ 
 

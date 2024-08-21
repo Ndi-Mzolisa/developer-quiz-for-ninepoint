@@ -50,3 +50,31 @@ document.addEventListener('DOMContentLoaded', function() {
         closeSidebar();
     });
 });
+
+
+// --------------- JS for the dropdown selector element --------------
+// Toggle dropdown visibility on button click
+document.querySelector('.dropdown-button').addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent click from bubbling up
+    const dropdownContent = document.querySelector('.dropdown-content');
+    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+});
+
+// Hide dropdown if clicking outside of it
+window.addEventListener('click', function() {
+    const dropdownContent = document.querySelector('.dropdown-content');
+    dropdownContent.style.display = 'none';
+});
+
+// Update button text with the selected option
+document.querySelectorAll('.dropdown-content a').forEach(item => {
+    item.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor behavior
+        const value = this.getAttribute('data-value');
+        const button = document.querySelector('.dropdown-button');
+        button.textContent = this.textContent;
+        document.querySelector('.dropdown-content').style.display = 'none'; // Hide the dropdown after selection
+    });
+});
+
+

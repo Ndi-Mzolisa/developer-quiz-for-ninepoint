@@ -8,16 +8,16 @@
   
   body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #efefef;
     overflow-x: hidden;
   }
   
-  /* Navigation Styles */
+  /* -------------- Navigation Styles ------------------- */
   #navigation {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 75px;
+    height: 108px;
     display: flex;
     cursor: pointer;
     justify-content: space-between;
@@ -41,7 +41,7 @@
   
   #navigation p {
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: 'Lato', sans-serif;
     color: inherit;
     letter-spacing: -4px;
@@ -51,6 +51,12 @@
     font-size: 24px;
     cursor: pointer;
     color: inherit;
+  }
+
+  /* Styles for the close icon */
+  #navigation i.fa-times {
+    display: none;
+    color: #666;
   }
   
   /* Sidebar Styles */
@@ -108,20 +114,85 @@
     left: 36px;
 }
   
-  /* Main content styles */
+  /* ----------------- Main content styles ------------------------- */
   main {
-    margin-top: 60px; /* Space for fixed navigation */
-    padding: 20px;
+    margin-top: 0;
+    padding: 0;
   }
-  
-  section {
-    padding: 50px 0;
+
+  section{
+    font-family: 'Montserrat', sans-serif;
   }
+
+    /* Section 1 */
+#section-1 {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(215, 220, 218);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 16.75rem 29rem 10rem 29rem;    /* an extra 6.75re, on top padding to give space for the fixed nav */
+}
+
+#section-1 h2,
+#section-2 h2,
+#section-3 h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+#section-1 h1,
+#section-2 h1,
+#section-3 h1{
+    font-size: 2.7rem;
+    font-weight: 700;
+    padding: 1.5rem 0;
+}
+
+#section-1 p,
+#section-2 p,
+#section-3 p{
+    line-height: 1.4rem;
+}
+
+    /* Section 2 */
+#section-2,
+#section-3 {
+    display: flex;
+    column-gap: 0rem;
+    padding: 3.6rem 0;
+}
+
+#section-2 .img-div,
+#section-3 .img-div {
+    width: 100%;
+    background-color: #9f9f9f;
+}
+
+#section-2 .content-div{
+    width: calc(100% - 12rem);
+    padding: 2rem 7.5rem 2rem 4.5rem;
+}
+
+#section-3 .content-div{
+    width: calc(100% - 12rem);
+    padding: 2rem 4.5rem 2rem 7.5rem;
+}
+
+#section-2 button,
+#section-3 button {
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #9f9f9f;
+    padding: 8px 45px;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 10px;
+}
   
   
-  /* Styles for the close icon */
-  #navigation i.fa-times {
-    display: none;
-  }
+  
   
 

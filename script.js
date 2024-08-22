@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const popupContent = document.querySelector('.popup-content');
     // Get the close button for the popup
     const popupClose = document.querySelector('.popup-close');
+    
 
     // Loop through each dropdown item
     dropdownItems.forEach(item => {
@@ -111,9 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
     popupClose.addEventListener('click', function() {
         // Hide the popup
         popup.style.display = 'none';
-        console.log('closed from X');
-    });
-
+    });    
 
 });
 
